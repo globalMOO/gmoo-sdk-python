@@ -1,0 +1,33 @@
+name: Tests
+
+# Only run manually (prevents automatic triggering)
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    # Use repository secrets instead of environment
+    # This is a key change that might fix the issue
+    # environment: test-release
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install hatch pytest
+        pip install .
+    - name: Run tests
+      env:
+        GMOO_API_KEY: ${{ secrets.GMOO_API_KEY }}
+        GMOO_API_URI: ${{ secrets.GMOO_API_URI }}
+      run: |
+        pytest tests/
