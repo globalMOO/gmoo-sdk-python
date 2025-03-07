@@ -32,7 +32,7 @@ There are two ways to provide your API credentials:
 1. Create a `.env` file in your project root:
 ```
 GMOO_API_KEY=your-api-key
-GMOO_API_URI=https://api.globalmoo.ai/api
+GMOO_API_URI=https://app.globalmoo.com/api/
 ```
 
 2. Initialize the client without explicit credentials:
@@ -50,7 +50,7 @@ from globalmoo.credentials import Credentials
 
 credentials = Credentials(
     api_key="your-api-key",
-    base_uri="https://api.globalmoo.ai/api"
+    base_uri="https://app.globalmoo.com/api/"
 )
 
 client = Client(credentials=credentials)
