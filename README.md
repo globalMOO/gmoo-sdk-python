@@ -1,6 +1,10 @@
 # globalMOO SDK for Python
 
-A Python SDK for interacting with the globalMOO API, providing a simple and intuitive interface for optimization tasks.
+A Python SDK for interacting with the [globalMOO API](https://app.globalmoo.com/), providing a simple and intuitive interface for optimization tasks.
+
+## Try It Now
+
+Get started now with an [interactive in-browser example](https://colab.research.google.com/drive/1uM7fAx2mMEj_hBAejnGCBenup_KdLIrK#scrollTo=XsLgUduy9kLY).
 
 ## Features
 
@@ -20,7 +24,42 @@ A Python SDK for interacting with the globalMOO API, providing a simple and intu
 
 Install the package using pip:
 ```bash
+pip install globalmoo-sdk
+```
+
+## Documentation
+
+For comprehensive documentation and API reference, visit our [globalMOO Documentation](https://globalmoo.gitbook.io/globalmoo-documentation).
+
+## Development
+
+If you're contributing to or modifying the SDK:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/globalMOO/gmoo-sdk-python.git
+cd gmoo-sdk-python
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install the package in development mode:
+```bash
 pip install -e .
+```
+
+4. Install development dependencies:
+```bash
+pip install pytest
+```
+
+5. Run tests:
+```bash
+pytest
 ```
 
 ## Authentication
@@ -215,7 +254,9 @@ if __name__ == "__main__":
     main()
 ```
 
-For a complete working example including inverse optimization, see `linear_example.py`.
+For a suite of examples demonstrating a variety of use cases including inverse solution and constrainted optimization, see the [`gmoo-sdk-suite`](https://github.com/globalMOO/gmoo-sdk-suite/tree/main/python). 
+
+The best starting point for inverse solution is [`linear_example.py`](https://github.com/globalMOO/gmoo-sdk-suite/blob/main/python/linear_example.py).
 
 ## Error Handling
 
@@ -234,50 +275,6 @@ For debugging, you can enable more detailed error information:
 
 ```python
 client = Client(debug=True)  # Will show full stack traces and request details
-```
-
-Here's the revised ending segment for your README:
-
-## Installation
-
-Install the package using pip:
-```bash
-pip install globalmoo-sdk
-```
-
-## Documentation
-
-For comprehensive documentation and API reference, visit our [globalMOO Documentation](https://globalmoo.gitbook.io/globalmoo-documentation).
-
-## Development
-
-If you're contributing to or modifying the SDK:
-
-1. Clone the repository:
-```bash
-git clone https://github.com/globalMOO/gmoo-sdk-python.git
-cd gmoo-sdk-python
-```
-
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install the package in development mode:
-```bash
-pip install -e .
-```
-
-4. Install development dependencies:
-```bash
-pip install pytest
-```
-
-5. Run tests:
-```bash
-pytest
 ```
 
 ## License
