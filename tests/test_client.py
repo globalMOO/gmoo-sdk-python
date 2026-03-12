@@ -108,7 +108,6 @@ from globalmoo.request.suggest_inverse import SuggestInverse
 from globalmoo.request.load_inversed_output import LoadInversedOutput
 from globalmoo.request.register_account import RegisterAccount
 from globalmoo.request.read_models import ReadModels
-from globalmoo.request.read_trial import ReadTrial
 
 
 class TestClientObjectiveOperations:

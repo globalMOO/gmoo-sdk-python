@@ -11,6 +11,8 @@ class Account(GlobalMooModel):
     updated_at: datetime
     disabled_at: Optional[datetime] = None
     company: str
+    first_name: str
+    last_name: Optional[str] = None
     name: str
     email: str
     api_key: str

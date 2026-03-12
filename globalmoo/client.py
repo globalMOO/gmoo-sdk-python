@@ -26,8 +26,9 @@ from .request.create_project import CreateProject
 from .request.load_objectives import LoadObjectives
 from .request.load_output_cases import LoadOutputCases
 from .request.load_inversed_output import LoadInversedOutput
+from .request.read_model import ReadModel
 from .request.read_models import ReadModels
-from .request.read_trial import ReadTrial
+from .request.read_objective import ReadObjective
 from .request.register_account import RegisterAccount
 from .request.suggest_inverse import SuggestInverse
 
